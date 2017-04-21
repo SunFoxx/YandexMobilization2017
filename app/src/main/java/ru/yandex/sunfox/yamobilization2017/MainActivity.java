@@ -1,6 +1,7 @@
 package ru.yandex.sunfox.yamobilization2017;
 
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Environment;
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
         tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         viewPager = (ViewPager) findViewById(R.id.view_pager);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         viewPager.setAdapter(new FragmentPageAdapter(getSupportFragmentManager(), this));
         tabLayout.setupWithViewPager(viewPager);
